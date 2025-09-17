@@ -19,20 +19,20 @@ async def send_metrics(websocket):
             await websocket.send(json.dumps(metrics))
             await asyncio.sleep(2)
     except websocket.ConnectionClosed:
-        print('Cliente desconectado')
+        print('Client disconnected')
     except Exception as e:
-        print(f'erro no envio de metricas{e}')
+        print(f'Error sending metrics: {e}')
 
 
 async def main():
     async with websockets.serve(send_metrics, "localhost", 8080):
-        print(" Servidor rodando em ws://localhost:8080")
+        print("Server running at ws://localhost:8080")
         await asyncio.Future()
 
 if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print("\n Servidor encerrado pelo usuário")
+        print("\nServer stopped by user")
     except Exception as e:
-        print(f" Erro crítico: {e}")
+        print(f"Critical error: {e}")
