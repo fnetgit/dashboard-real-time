@@ -18,7 +18,8 @@ async def send_metrics(websocket):
             metrics = get_metrics()
             await websocket.send(json.dumps(metrics))
             await asyncio.sleep(2)
-    except websocket.ConnectionClosed:
+            print('Cliente conectado')
+    except websockets.ConnectionClosed:
         print('Client disconnected')
     except Exception as e:
         print(f'Error sending metrics: {e}')
