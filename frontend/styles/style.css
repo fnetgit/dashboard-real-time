@@ -1,16 +1,32 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  padding: 20px;
-  text-align: center;
 }
 
 h1 {
   color: #333;
 }
 
-.metric span {
+.metrics span {
   font-weight: bold;
   color: #0c9785;
     font-size: 1.5em;
 }
+
+.metric {
+  margin: 20px 0;
+}
+
+.value {
+  font-size: 2em;
+  color: #555;
+}
+
+section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+}
+
