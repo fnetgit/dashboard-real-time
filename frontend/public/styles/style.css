@@ -76,6 +76,17 @@ main {
   margin-top: 5px;
 }
 
+.description {
+  max-width: 1000px;
+  margin: 20px auto;
+  font-size: 1.1em;
+  color: black;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+
 @media (max-width: 768px) {
   .metrics-container {
     flex-direction: column;
