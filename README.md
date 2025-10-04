@@ -66,13 +66,6 @@ python server/server.py
 
 O terminal exibirá uma mensagem confirmando que o servidor WebSocket foi iniciado.
 
-Para visualizar o dashboard, rode um servidor HTTP simples e acesse via navegador:
-
-```bash
-cd client
-python -m http.server 8080
-```
-
 Em seguida, abra [http://localhost:8080](http://localhost:8080) no seu navegador.
 
 ## Tecnologias Utilizadas
