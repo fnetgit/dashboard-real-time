@@ -9,24 +9,29 @@
 </head>
 
 <body>
-  <h1>Monitoramento do Servidor</h1>
+  <header>
+    <h1>Monitoramento do Servidor</h1>
+  </header>
 
-  <section class="metrics">
-    <div class="cpu-metric">
-      <span>CPU</span>
-      <div id="cpu" class="value">--%</div>
-    </div>
+  <main>
+    <section class="metrics-container">
+      <div class="metric-card">
+        <span class="metric-title">CPU</span>
+        <div id="cpu" class="value">--%</div>
+      </div>
 
-    <div class="memory-metric">
-      <span>Memória</span>
-      <div id="memory" class="value">--%</div>
-    </div>
+      <div class="metric-card">
+        <span class="metric-title">Memória</span>
+        <div id="memory" class="value">--%</div>
+      </div>
 
-    <div class="disk-metric">
-      <span>Disco</span>
-      <div id="disk" class="value">--%</div>
-    </div>
-  </section>
+      <div class="metric-card">
+        <span class="metric-title">Disco</span>
+        <div id="disk" class="value">--%</div>
+      </div>
+    </section>
+  </main>
+
 
 </body>
 <script src="./scripts/index.js"></script>

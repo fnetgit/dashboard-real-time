@@ -1,32 +1,77 @@
+:root {
+  --nav-color: #0c9785;
+  --bg-color: #eef2f7;
+  --card-bg-color: #ffffff;
+  --font-color: #333333;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--nav-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #333;
+  margin: 0;
+  font-size: 2em;
 }
 
-.metrics span {
-  font-weight: bold;
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  width: 100%;
+}
+
+.metrics-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  background-color: var(--card-bg-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-basis: calc(28% - 20px);
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.metric-title {
+  font-weight: 600;
   color: #0c9785;
-    font-size: 1.5em;
-}
-
-.metric {
-  margin: 20px 0;
+  font-size: 1.3em;
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eef2f7;
+  padding-bottom: 5px;
 }
 
 .value {
-  font-size: 2em;
-  color: #555;
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #4a5568;
+  margin-top: 5px;
 }
-
-section {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  margin: auto;
-}
-
