@@ -189,3 +189,7 @@ socket.onerror = (error) => {
   statusText.textContent = "Erro de conexão";
   statusIndicator.className = "status-dot error";
 };
+
+
+// Atualiza o ano no rodapé
+document.getElementById('current-year-footer').textContent = new Date().getFullYear();
