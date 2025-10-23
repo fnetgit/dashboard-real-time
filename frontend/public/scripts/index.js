@@ -1,6 +1,6 @@
 // Configuração do WebSocket
 const WS_URL = "ws://localhost:8080";
-const MAX_DATA_POINTS = 20; // Número de pontos a serem exibidos no gráfico
+const MAX_DATA_POINTS = 5; // Número de pontos a serem exibidos no gráfico
 
 // Referências aos elementos DOM
 const statusIndicator = document.getElementById("status-indicator");
@@ -63,7 +63,7 @@ function createChart(canvasId, label, color) {
           ticks: {
             maxRotation: 0,
             autoSkip: true,
-            maxTicksLimit: 6,
+            maxTicksLimit: 5,
           },
         },
       },
