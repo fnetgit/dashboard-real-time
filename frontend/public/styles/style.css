@@ -196,7 +196,7 @@ footer {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 30px;
+  gap: 100px;
   text-align: center;
 }
 
