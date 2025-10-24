@@ -82,7 +82,6 @@ h1 {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -94,13 +93,13 @@ h1 {
 }
 
 main {
-  padding: 20px;
+  padding: 30px 20px;
+  margin: 0 auto;
+
   max-width: 1200px;
-  margin: 30px auto;
   width: 100%;
+  flex-grow: 1;
 }
-
-
 
 .metrics-container {
   display: flex;
@@ -156,11 +155,38 @@ main {
   margin-top: 10px;
 }
 
+.io-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+  border-top: 2px solid var(--bg-color);
+  padding-top: 15px;
+}
+
+.io-box {
+  text-align: center;
+}
+
+.io-title {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.io-value {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--font-color);
+}
+
 footer {
   background-color: var(--nav-color);
   color: white;
   padding: 40px 20px 10px 20px;
-  margin-top: 50px;
+  margin-top: 0;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -240,11 +266,9 @@ footer {
 }
 
 @media (min-width: 700px) {
-
   h1 {
     font-size: 2em;
   }
-
 
   .metrics-container {
     flex-direction: row;
@@ -278,6 +302,13 @@ footer {
     height: 180px;
   }
 
+  .io-value {
+    font-size: 1.25em;
+  }
+  .io-title {
+    font-size: 1em;
+  }
+
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
@@ -304,7 +335,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-
   .metrics-container {
     justify-content: space-between;
   }
