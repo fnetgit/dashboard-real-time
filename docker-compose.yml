@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: dashboard-backend
+    network_mode: "host"
+    environment:
+      WS_HOST: "localhost"
+      WS_PORT: 8080
+      ALLOWED_ORIGINS: "http://localhost:3000"
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: dashboard-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+
+    depends_on:
+      - backend
+
+    restart: always
