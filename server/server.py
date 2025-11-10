@@ -39,7 +39,7 @@ def get_metrics():
             "cpu": round(cpu, 2),
             "memory": round(memory, 2),
             "disk": round(disk_usage, 2),
-            "disk_read": round(read_speed, 2),  
+            "disk_read": round(read_speed, 2),
             "disk_write": round(write_speed, 2),
             "timestamp": datetime.now().isoformat()
         }
@@ -54,7 +54,7 @@ async def register_client(websocket):
     print(f'[{datetime.now().strftime("%H:%M:%S")}] Cliente conectado: {client_info}')
     CLIENTS.add(websocket)
     try:
-        await websocket.wait_closed()  
+        await websocket.wait_closed()
     finally:
         CLIENTS.remove(websocket)
         print(
