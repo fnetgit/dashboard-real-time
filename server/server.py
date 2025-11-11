@@ -5,10 +5,10 @@ import psutil
 import os
 from datetime import datetime
 
-HOST = os.getenv('WS_HOST', 'localhost')
-PORT = int(os.getenv('WS_PORT', '8080'))
+HOST = os.getenv('WS_HOST', '0.0.0.0')
+PORT = int(os.getenv('WS_PORT', '8765'))
 ALLOWED_ORIGINS = os.getenv(
-    'ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+    'ALLOWED_ORIGINS', 'https://pagetest.home.kg,http://pagetest.home.kg')
 UPDATE_INTERVAL = float(os.getenv('UPDATE_INTERVAL', '2'))
 
 psutil.cpu_percent(interval=None)
@@ -87,9 +87,11 @@ async def main():
             register_client,
             HOST,
             PORT,
-            origins=ALLOWED_ORIGINS,
+            origins=ALLOWED_ORIGINS.split(','),
             ping_interval=20,
-            ping_timeout=10
+            ping_timeout=10,
+            max_size=10 * 1024 * 1024,
+            max_queue=32
         ):
             await asyncio.Future()
 

@@ -1,4 +1,6 @@
-const WS_URL = `ws://${window.location.hostname}:8080`;
+const WS_URL = window.location.protocol === 'https:' 
+    ? `wss://${window.location.hostname}/ws/`
+    : `ws://${window.location.hostname}/ws/`;
 const MAX_DATA_POINTS = 30; // 30 pontos (60 segundos de histórico)
 const RECONNECT_DELAY = 5000; // 5 segundos
 
